@@ -1,0 +1,39 @@
+.botao {
+    display: block;
+    background-color: var(--amarelo);
+    border: none;
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;;
+}
+
+.botao:hover {
+    transition: 0.5s;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.opcao {
+    padding: 1em 0;
+    position: absolute;
+    top: 8%;
+    z-index: 1;
+    border: none;
+    box-shadow: 3px 1px 5px black;
+    background-color: white;
+}
+
+.opcao button {
+    cursor: pointer;
+    display: flex;
+    background-color: white;
+    border: none;
+    font-size: 16px;
+    font-family: var(--fonte);
+    height: 600;
+    color: black;
+}
+
+.opcao button:hover {
+    transition: 0.5s;
+    color: var(--amarelo);
+}

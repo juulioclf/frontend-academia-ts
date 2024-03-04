@@ -10,54 +10,63 @@ import Services from "../../Components/Services";
 import BackToTop from "../../Components/Buttons/BackToTop";
 
 import {
-  Image,
   TextAbout,
   TextSide,
   ImageText,
   Cadastro,
   Contatos,
-  Icone
+  Icone,
+  Main,
+  Img,
+  ExerciseInfo,
+  TextAboutExercise,
+  DeadLiftDiv,
+  TextAboutDeadLift,
+  DivInfo
 } from "./styles"
 
 
 export default function Initial() {
   return (
-    <div className="App">
+    <div>
         <Header />
 
-        <section id="home">
-          <Image src={Woman} alt="Mulher levantando peso" />
-            <TextAbout>
-            <h1><strong>Transforme seu treino em uma experiência personalizada e eficaz.</strong>Vamos criar juntos um 
-            programa que se adapte aos seus objetivos e estilo de vida.</h1>
+        <Main>
+          <TextAbout isMaxWidth={true}>
+            <h1>
+              <strong>Transforme seu treino em uma experiência personalizada e eficaz.</strong>
+              Vamos criar juntos um programa que se adapte aos seus objetivos e estilo de vida.
+            </h1>
           </TextAbout>
-        </section>
+        </Main>
 
-        <section id="sobre">
-          <TextAbout>Por que fazer <strong>atividade fisica</strong> é importante para seu <strong>corpo</strong> ?</TextAbout>
-            <img src={Lipe} alt="Descrição_da_imagem" />
-            <TextSide>
-              “Os exercícios de resistência, como o levantamento de pesos, promovem a saúde dos ossos, 
-              prevenindo a perda de densidade óssea. Além disso, contribuem para o desenvolvimento e manutenção da massa
-               muscular.”
-            </TextSide>
-        </section>
+        <ExerciseInfo>
+            <Img src={Lipe} alt="Descrição_da_imagem" />
+            <div style={{display: "flex", flexDirection: "column", gap: "2vw"}}>
+              <TextAboutExercise>
+                <h1>
+                Por que fazer <strong>atividade fisica</strong> é importante para seu <strong>corpo</strong> ?
+                </h1>
+              </TextAboutExercise>
+              <TextSide>
+                “Os exercícios de resistência, como o levantamento de pesos, promovem a saúde dos ossos, 
+                prevenindo a perda de densidade óssea. Além disso, contribuem para o desenvolvimento e manutenção da massa
+                muscular.”
+              </TextSide>
+            </div>
+        </ExerciseInfo>
 
-        <section id='sobre2'>
-            <ImageText>
-                <img src={Deadlift} alt='um_homem_fazendo_levantamento_de_peso' />
-                <TextAbout>
-                    <h2>Seu <strong>corpo pode fazer</strong> isso</h2>
-                    <h2>É hora de <strong>convencer sua mente</strong></h2>
-                </TextAbout>
-            </ImageText>
-        </section>
+        <DeadLiftDiv>
+          <TextAboutDeadLift>
+              <h2>Seu <strong>corpo pode fazer</strong> isso</h2>
+              <h2>É hora de <strong>convencer sua mente</strong></h2>
+            </TextAboutDeadLift>
+        </DeadLiftDiv>
 
-        <section id="servicos">
-          <Services />
-        </section>
+        <Services />
 
-        <section id="contatos">
+
+        <DivInfo>
           <Cadastro>
                 <label htmlFor="nome"></label>
                 <input type="text" id='nome' placeholder="Digite seu nome" required></input>
@@ -70,7 +79,7 @@ export default function Initial() {
                     @DicoPersonal
                     </Icone>
             </Contatos>
-        </section>
+        </DivInfo>
 
         <BackToTop/>
     </div>

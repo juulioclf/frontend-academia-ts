@@ -26,9 +26,11 @@ export default function BackToTop (){
   window.addEventListener('scroll', toggleVisible);
   
   return (
-    <Button>
-     <FaArrowCircleUp onClick={scrollToTop} 
-     style={{display: visible ? 'inline' : 'none'}} />
-    </Button>
+    <div style={{display: "flex"}}>
+      <Button>
+        <FaArrowCircleUp onClick={scrollToTop} 
+        style={{display: visible ? 'inline' : 'none'}} />
+      </Button>
+    </div>
   );
 }

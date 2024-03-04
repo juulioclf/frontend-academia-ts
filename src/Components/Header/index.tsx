@@ -1,4 +1,4 @@
-import LoginButton from '../Buttons/LoginButton';
+import ShowLoginButton from '../Buttons/ShowLoginButton';
 import { Container, Menu, Opcoes } from './styles';
 
 export default function Header(){
@@ -32,7 +32,7 @@ export default function Header(){
                         </Opcoes>
                         <Opcoes>
                             <hr/>
-                            <LoginButton/>
+                            <ShowLoginButton/>
                         </Opcoes>
                     </Menu>
                 </nav>
